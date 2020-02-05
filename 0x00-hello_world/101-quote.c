@@ -1,14 +1,10 @@
+#include <unistd.h>
 /**
  * main - this is the main function
  * Return: Will be 1
 */
 int main(void)
 {
-char *s = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-long l = 60;
-long fd = 1;
-long syscall = 1;
-long ret = 0;
-__asm__("syscall" : "=a" (ret) : "a" (syscall), "D" (fd), "S" (s), "d" (l));
+write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 60);
 return (1);
 }
