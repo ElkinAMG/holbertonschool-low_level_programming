@@ -17,7 +17,8 @@ if (a == 57 && b == 57)
 {
 break;
 }
-else{
+else
+{
 putchar(44);
 putchar(32);
 }
