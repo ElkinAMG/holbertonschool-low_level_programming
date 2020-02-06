@@ -1,32 +1,32 @@
 #include <stdio.h>
 /**
- * main - main function
- * Return: 0 always
+ * main - this is the main function
+ *
+ * Return: Always print 0
  */
 int main(void)
 {
-int a;
+int a = '0';
 int b;
-for (a = 48; a <= 57; a++)
+while (a <= '9')
 {
-for (b = 48; b <= 57; b++)
-{
-if (a != 57 && b != 48)
+b = a + 1;
+while (b <= '9')
 {
 putchar(a);
 putchar(b);
-if (a == 57 && b == 57)
+if (a == '8' && b == '9')
 {
-break;
+putchar('\n');
 }
 else
 {
 putchar(44);
 putchar(32);
 }
+b++;
 }
+a++;
 }
-}
-putchar('\n');
 return (0);
 }
