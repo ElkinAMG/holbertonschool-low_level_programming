@@ -17,8 +17,10 @@ if (a == 57 && b == 57)
 {
 break;
 }
-putchar(',');
-putchar(' ');
+else{
+putchar(44);
+putchar(32);
+}
 }
 }
 putchar('\n');
