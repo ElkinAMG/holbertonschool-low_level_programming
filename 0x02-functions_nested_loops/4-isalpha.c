@@ -1,4 +1,10 @@
 #include "holberton.h"
+/**
+ * _isalpha - Displays alphanumeric
+ * @c: The character to print
+ *
+ * Return: On success 0.
+ */
 int _isalpha(int c)
 {
 	int u;
