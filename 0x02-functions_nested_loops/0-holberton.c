@@ -8,10 +8,12 @@ int main(void)
 {
 	int i;
 
-	char school[] = "Holberton\n";
+	char school[] = "Holberton";
 
-	for (i = 0; i <= 13; i++)
+	for (i = 0; i <= 9; i++)
 		_putchar(school[i]);
+
+	_putchar('\n');
 
 	return (0);
 }
