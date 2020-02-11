@@ -11,20 +11,31 @@ void times_table(void)
 		for (times = 0; times <= 9; times++)
 		{
 			multiply = times * i;
-			if ((multiply) <= 9)
+			if ((multiply) >= 1 && (multiply) <= 9)
 			{
 				_putchar(44);
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(multiply + '0');
 			}
-			else
+			else if ((multiply) > 9)
 			{
 				_putchar(44);
 				_putchar(' ');
 				_putchar(multiply / 10 + '0');
 				_putchar(multiply % 10 + '0');
 			}
+			else if ((multiply) == 0 && times == 0)
+			{
+				_putchar(multiply + '0');
+}
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(multiply + '0');
+}
 		}
 		_putchar('\n');
 	}
