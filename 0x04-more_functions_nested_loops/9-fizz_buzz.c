@@ -12,15 +12,36 @@ int main(void)
 	{
 		if ((i % 3 || i % 5) == 0)
 		{
-			printf("FizzBuzz");
+			if (i == 100)
+			{
+				printf("FizzBuzz");
+			}
+			else
+			{
+				printf("FizzBuzz ");
+			}
 		}
 		else if ((i % 3) == 0)
 		{
-			printf("Fizz ");
+			if (i == 100)
+			{
+				printf("Fizz");
+			}
+			else
+			{
+				printf("Fizz ");
+			}
 		}
 		else if ((i % 5) == 0)
 		{
-			printf("Buzz ");
+			if (i == 100)
+			{
+				printf("Buzz");
+			}
+			else
+			{
+				printf("Buzz ");
+			}
 		}
 		else
 		{
@@ -37,11 +58,11 @@ int main(void)
 				putchar((i % 10) + '0');
 				putchar(' ');
 			}
-		else
-		{
-			putchar(i + '0');
-			putchar(' ');
-}
+			else
+			{
+				putchar(i + '0');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
