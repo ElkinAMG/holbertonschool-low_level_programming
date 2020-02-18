@@ -5,18 +5,16 @@
  */
 void puts_half(char *str)
 {
-	int _strlen(char *s);
-
-	int len, i;
+	int _strlen(char *s), len, i;
 
 	len = _strlen(str);
 
 	if ((len % 2) == 0)
 		i = (len / 2);
 	else
-		i = ((len + 1) / 2);
+		i = ((len - 1) / 2);
 
-	for (i = i; i <= len; i++)
+	for ( ; i < len; i++)
 		_putchar(*(str + i));
 
 	_putchar('\n');
@@ -33,7 +31,7 @@ int _strlen(char *s)
 
 	i = 0;
 
-	while (*(s + i) != '\0')
+	while (*(s++) != '\0')
 		i++;
 
 	return (i);
