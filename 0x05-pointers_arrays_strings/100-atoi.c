@@ -12,20 +12,19 @@ int _atoi(char *s)
 
 	for (i = 0; s[i] != '\0'; ++i)
 	{
-		if (isnum(s[i + 1] && s[i] == '-')
-			{
-				sign = -1;
-				i++;
-			}
-			if (isnum(s[i])
-				{
-					res = (res * 10 + s[i] - '0');
-					if (s[i + 1] == ' ')
-						break;
-				}
-			return (res * sign);
-			}
+		if (isnum(s[i + 1]) && s[i] == '-')
+		{
+			sign = -1;
+			i++;
+		}
+		if (isnum(s[i]))
+		{
+			res = (res * 10 + s[i] - '0');
+			if (s[i + 1] == ' ')
+				break;
+		}
 	}
+	return (res * sign);
 }
 
 /**
