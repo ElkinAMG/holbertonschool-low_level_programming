@@ -18,7 +18,9 @@ int isnum(int a)
 int _atoi(char *s)
 {
 	unsigned int res, i;
+
 	int sign;
+
 	sign = 1;
 	res = 0;
 
