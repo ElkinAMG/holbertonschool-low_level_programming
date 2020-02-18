@@ -30,7 +30,7 @@ void rev_string(char *s)
 }
 /**
  * _strlen - find the length of a string
- * @s: input string pointer
+ * @str: input string pointer
  *
  * Return: string length
  */

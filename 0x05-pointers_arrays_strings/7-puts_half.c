@@ -1,22 +1,24 @@
 #include "holberton.h"
 /**
- * puts2 - prints odd characters.
- * @str: string to print.
+ * puts_half - prints the half in a string.
+ * @str: Variable string.
  */
-void puts2(char *str)
+void puts_half(char *str)
 {
 	int _strlen(char *s);
-	int len, c;
+
+	int len, i;
 
 	len = _strlen(str);
 
-	for (c = 0; c <= len; c++)
-	{
-		if ((c % 2) == 0)
-			_putchar(*str);
+	if ((len % 2) == 0)
+		i = (len / 2);
+	else
+		i = ((len + 1) / 2);
 
-		str++;
-	}
+	for (i = i; i <= len; i++)
+		_putchar(*(str + i));
+
 	_putchar('\n');
 }
 /**
@@ -30,6 +32,7 @@ int _strlen(char *s)
 	int i;
 
 	i = 0;
+
 	while (*(s + i) != '\0')
 		i++;
 
