@@ -5,18 +5,12 @@
  */
 void print_rev(char *s)
 {
-	int _strlen(char *str);
-
-	int l;
+	int _strlen(char *str), l;
 
 	l = _strlen(s);
 
-	while (l > 0)
-	{
-		_putchar(*(s));
-		l--;
-		s++;
-	}
+	for(l--; l >= 0; l--)
+		_putchar(*(s + l));
 
 	_putchar('\n');
 }
@@ -31,11 +25,8 @@ int _strlen(char *str)
 
 	c = 0;
 
-	while (*(str) != '\0')
-	{
+	for ( ; *(str) != '\0'; str++)
 		c++;
-		str++;
-	}
 
 	return (c);
 }
