@@ -1,12 +1,24 @@
 #include "holberton.h"
 /**
+ * isnum - checks if this variable is a number.
+ * @a: variables num
+ *
+ * Return: returns (1) if it's true
+ */
+int isnum(int a)
+{
+	return (a >= '0' && a <= '9');
+}
+
+/**
  * _atoi - converts from string to integer.
  * @s: pointer string.
  * Return: the number that was converted.
  */
 int _atoi(char *s)
 {
-	int isnum(int num), res, i, sign;
+	unsigned int res, i;
+	int sign;
 	sign = 1;
 	res = 0;
 
@@ -24,15 +36,4 @@ int _atoi(char *s)
 		}
 	}
 	return (res * sign);
-}
-
-/**
- * isnum - checks if this variable is a number.
- * @a: variables num
- *
- * Return: returns (1) if it's true
- */
-int isnum(int a)
-{
-	return (a >= '0' && a <= '9');
 }
