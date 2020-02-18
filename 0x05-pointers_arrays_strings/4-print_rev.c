@@ -14,7 +14,7 @@ void print_rev(char *s)
 	while (l >= 0)
 	{
 		_putchar(s[l]);
-		l = l - 1;
+		l--;
 	}
 
 	_putchar('\n');
@@ -30,9 +30,10 @@ int _strlen(char *str)
 
 	c = 0;
 
-	while (str[c] != '\0')
+	while (*(str) != '\0')
 	{
 		c++;
+		str++;
 	}
 
 	return (c);
