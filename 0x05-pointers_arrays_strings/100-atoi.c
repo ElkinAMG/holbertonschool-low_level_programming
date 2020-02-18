@@ -23,19 +23,21 @@ int _atoi(char *s)
 					if (s[i + 1] == ' ')
 						break;
 				}
-				}
 			return (res * sign);
 			}
+	}
+}
+
 /**
  * isnum - checks if this variable is a number.
  * @a: variables num
  *
  * Return: returns (1) if it's true
  */
-		int isnum(int a)
-		{
-			if (a >= '0' && a <= '9')
-				return (1);
-			else
-				return (0);
-		}
+int isnum(int a)
+{
+	if (a >= '0' && a <= '9')
+		return (1);
+	else
+		return (0);
+}
