@@ -8,7 +8,7 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int i, sign;
+	int i;
 
 	/*substract s1++ with s2++, if total is == 0 break the loop*/
 	for (i = 0; *(s1 + i) != '\0'; i++)
