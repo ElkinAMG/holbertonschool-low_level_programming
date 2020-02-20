@@ -11,10 +11,10 @@ int _strcmp(char *s1, char *s2)
 	int i, sign;
 
 	/*substract s1++ with s2++, if total is == 0 break the loop*/
-	for (i = 0;(*(s1 + i) != '\0' && *(s2 + i) != '\0'); i++)
+	for (i = 0; *(s1 + i) != '\0'; i++)
 	{
-		sign = (*s1 + i) - (*s2 + i);
-		return (sign);
+		if (*(s1 + i) != *(s2 + i))
+			return((*s1 + i) - (*s2 + i));
 	}
 	return (0);
 }
