@@ -1,4 +1,4 @@
-#include "holberton.h"
+ #include "holberton.h"
 /**
  * _isalpha - The letter is a letter.
  * @c: character.
@@ -15,9 +15,10 @@ int _isalpha(char c)
  */
 int _bypunt(char sim)
 {
-	return (sim == ',' || sim == ';' || sim == '.' || sim == '!'
-		|| sim == '?' || sim == '"' || sim == '(' || sim == ')'
-		|| sim == '{' || sim == '}' || sim == ' ');
+	return (sim == ',' || sim == ';' || sim == '.'
+		|| sim == '!' || sim == '?' || sim == '"'
+		|| sim == '(' || sim == ')' || sim == '{'
+		|| sim == '}' || sim == ' ');
 }
 /**
  * cap_string - Capitalizes all words of a string.
@@ -32,7 +33,10 @@ char *cap_string(char *s)
 
 	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		if ((_bypunt(s[i]) || s[i] == '\n' || s[i] == '\t') && _isalpha(s[i + 1]))
+		if (_isalpha(*(s + 0)))
+			*(s) = (*(s) - 32);
+		if ((_bypunt(*(s + i)) || *(s + i) == '\n' || *(s + i) == '\t')
+		    && _isalpha(*(s + i + 1)))
 		{
 			*(s + i + 1) = (*(s + i + 1) - 32);
 		}
