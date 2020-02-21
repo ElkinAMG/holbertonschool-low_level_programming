@@ -6,6 +6,7 @@
 void print_number(int n)
 {
 	int tl;
+
 	tl = 0;
 
 	if (n == 0)
@@ -14,7 +15,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar ('-');
-		n = (n * (-1));
+		n *= -1;
 	}
 
 	while (n != 0)
