@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 /**
  * comp - Travels in every content for x and y, then returns 1/0.
  * @c1: string 1.
