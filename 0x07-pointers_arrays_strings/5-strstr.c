@@ -27,6 +27,7 @@ int comp(char *c1, char *c2)
 char *_strstr(char *haystack, char *needle)
 {
 	int i, k;
+
 	i = 0, k = 0;
 
 	for ( ; *(haystack + i) != '\0'; i++)
