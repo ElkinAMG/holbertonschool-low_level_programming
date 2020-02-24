@@ -4,7 +4,7 @@
  * @a: Pointer to the matrix [row][columns]
  * @size: Size of one the string one dimension.
  */
-void print_diagsums (int *a, int size)
+void print_diagsums(int *a, int size)
 {
 	int i, sum1, sum2;
 
