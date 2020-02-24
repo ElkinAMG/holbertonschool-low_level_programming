@@ -25,18 +25,12 @@ int comp(char *c1, char *c2)
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, k;
-
-	i = 0, k = 0;
-
-	for ( ; *(haystack + i) != '\0'; i++)
-		if (comp(haystack + i, needle + k))
+	for ( ; *haystack; haystack++)
+		if (comp(haystack, needle))
 		{
-			return (haystack + i);
-			k++;
+			return (haystack);
+			needle++;
 		}
-	if (*(haystack + i) == *needle)
-		return (haystack);
 
-	return ('\0');
+	return (*haystack == *needle ? haystack : 0);
 }
