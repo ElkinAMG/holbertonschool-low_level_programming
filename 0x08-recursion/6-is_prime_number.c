@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
  * PrimeChecker - Checks if the given number is prime or not.
- * @v: Given number.
+ * @v: Iterator.
+ * @i: Number given.
  *
  * Return: if the number is prime returns 1, otherwise 0.
  */
