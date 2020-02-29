@@ -8,18 +8,20 @@
  */
 int main(int argc, char **argv)
 {
-	int number[2], i;
+	int mult, i;
+
+	mult = 1;
 
 	if (argc > 2)
 		for (i = 0; i < argc - 1; i++)
-			number[i] = atoi(argv[i + 1]);
+			mult *= atoi(argv[i + 1]);
 	else
 	{
 		printf("ERROR\n");
 		return (1);
 	}
 
-	printf("%i\n", number[0] * number[1]);
+	printf("%i\n", mult);
 
 	return (0);
 }

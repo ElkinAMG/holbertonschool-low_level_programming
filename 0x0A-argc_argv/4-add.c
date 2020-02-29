@@ -8,7 +8,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int total, i, j;
+	int total, i;
 	unsigned int j;
 
 	total = 0;
