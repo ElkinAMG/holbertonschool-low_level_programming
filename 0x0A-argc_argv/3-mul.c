@@ -8,10 +8,10 @@
  */
 int main(int argc, char **argv)
 {
-	int number[2];
+	int number[2], int i;
 
 	if (argc > 2)
-		for (int i = 0; i < argc - 1; i++)
+		for (i = 0; i < argc - 1; i++)
 			number[i] = atoi(argv[i + 1]);
 	else
 	{
