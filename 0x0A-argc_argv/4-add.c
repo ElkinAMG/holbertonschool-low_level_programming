@@ -8,12 +8,15 @@
  */
 int main(int argc, char *argv[])
 {
-	int total = 0;
+	int total, i, j;
+	unsigned int j;
+
+	total = 0;
 
 	if (argc > 1)
-		for (int i = 1; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
-			for (unsigned int j = 0; argv[i][j] != '\0'; j++)
+			for (j = 0; argv[i][j] != '\0'; j++)
 			{
 				if (!isalpha(argv[i][j]))
 				{
