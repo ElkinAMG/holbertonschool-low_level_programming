@@ -15,7 +15,7 @@ int main(int argc, char **argv)
 			number[i] = atoi(argv[i + 1]);
 	else
 	{
-		puts("ERROR");
+		printf("ERROR\n");
 		return (1);
 	}
 
