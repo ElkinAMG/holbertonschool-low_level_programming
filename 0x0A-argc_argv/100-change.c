@@ -10,13 +10,13 @@ int main(int argc, char **argv)
 {
 	int gbcoins, coins;
 
-	gbcoins = 0, coins = atoi(*(argv + 1));
-
 	if (argc != 2)
 	{
-		puts("Error");
+		printf("Error\n");
 		return (1);
 	}
+
+	gbcoins = 0, coins = atoi(*(argv + 1));
 
 	while (coins > 0)
 	{
