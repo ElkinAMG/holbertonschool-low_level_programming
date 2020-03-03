@@ -16,14 +16,14 @@ char *_strdup(char *str)
 	while (*(str + i) != '\0')
 		i++;
 
-	newS = malloc(sizeof(char *) * (i + 1));
+	newS = (char *)malloc(sizeof(char *) * (i + 1);
 
 	if (newS == NULL)
 		return (NULL);
 
 	i = 0;
 
-	while (*newS < *(str + i))
+	while (*newS <= *(str + i))
 	{
 		*(newS + i) = *(str + i);
 		i++;
