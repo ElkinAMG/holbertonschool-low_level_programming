@@ -7,7 +7,7 @@
  */
 char *_strdup(char *str)
 {
-	int i;
+	unsigned int i, j;
 	char *newS;
 
 	if (str == NULL)
@@ -16,17 +16,15 @@ char *_strdup(char *str)
 	while (*(str + i) != '\0')
 		i++;
 
-	newS = (char *)malloc(sizeof(char *) * (i + 1));
+	newS = (char *)malloc(sizeof(char) * (i + 1));
 
 	if (newS == NULL)
 		return (NULL);
 
-	i = 0;
-
-	while (*newS <= *(str + i))
+	while (j <= i)
 	{
-		*(newS + i) = *(str + i);
-		i++;
+		*(newS + j) = *(str + j);
+		j++;
 	}
 
 	return (newS);
