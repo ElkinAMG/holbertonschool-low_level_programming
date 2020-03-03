@@ -23,6 +23,8 @@ char *_strdup(char *str)
 	if (newS == NULL)
 		return (NULL);
 
+	j = 0;
+
 	while (j <= i)
 	{
 		*(newS + j) = *(str + j);
