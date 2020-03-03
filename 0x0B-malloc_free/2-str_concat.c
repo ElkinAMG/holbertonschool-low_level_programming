@@ -1,5 +1,20 @@
 #include "holberton.h"
 /**
+ * _strlen - returns the length of a string.
+ * @s: Pointer
+ * Return: Always 0.
+ */
+int _strlen(char *s)
+{
+	int i;
+
+	for (i = 0; s[i] != 0; i++)
+	{
+	}
+
+	return (i);
+}
+/**
  * str_concat - This function concatenates two strings.
  * @s1: First String.
  * @s2: Second String.
@@ -8,31 +23,35 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i, j, k;
-	char *concat;
+	char *s3;
+	int i, j, k;
 
-	k = 0;
-
-	(s1 == NULL ? s1 = "" : 0);
-	(s2 == NULL ? s2 = "" : 0);
-
-	i = 0;
-
-	while (*(s1 + i) != '\0' && *(s2 + i) != '\0')
-		i++;
-
-	concat = (char *)malloc(1 + sizeof(char) * i);
-
-	if (concat == NULL)
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	s3 = (char *)malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
+	if (s3 == NULL)
+	{
 		return (NULL);
+	}
+	k = 0;
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		s3[k] = s1[i];
+		k++;
+	}
 
-	for (i = 0; *(s1 + i) != '\0'; i++, k++)
-		concat[k] = s1[i];
+	for (j = 0; s2[j] != '\0'; j++)
+	{
+		s3[k] = s2[j];
+		k++;
+	}
 
-	for (j = 0; *(s2 + j) != '\0'; j++, k++)
-		concat[k] = s2[j];
-
-	*(concat + k) = '\0';
-
-	return (concat);
+	s3[k] = '\0';
+	return (s3);
 }
