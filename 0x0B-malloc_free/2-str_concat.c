@@ -8,8 +8,10 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i, j;
+	unsigned int i, j, k;
 	char *concat;
+
+	k = 0;
 
 	(s1 == NULL ? s1 = "" : 0);
 	(s2 == NULL ? s2 = "" : 0);
@@ -24,13 +26,13 @@ char *str_concat(char *s1, char *s2)
 	if (concat == NULL)
 		return (NULL);
 
-	for (i = 0; *(s1 + i) != '\0'; i++)
-		*(concat + i) = *(s1 + i);
+	for (i = 0; *(s1 + i) != '\0'; i++, k++)
+		*(concat + k) = *(s1 + i);
 
-	for (j = 0; *(s2 + j) != '\0'; j++)
-		*(concat + j + i) = *(s2 + j);
+	for (j = 0; *(s2 + j) != '\0'; j++, k++)
+		*(concat + k) = *(s2 + j);
 
-	*(concat + j + i + 1) = '\0';
+	*(concat + k) = '\0';
 
 	return (concat);
 }
