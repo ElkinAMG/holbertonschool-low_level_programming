@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 	while (*(s1 + i) != '\0' && *(s2 + i) != '\0')
 		i++;
 
-	concat = malloc(sizeof(char) * (i + 1));
+	concat = malloc(sizeof(char) * (i + 2));
 
 	if (concat == NULL)
 	{
@@ -30,7 +30,7 @@ char *str_concat(char *s1, char *s2)
 	for (i = 0; *(s1 + i) != '\0'; i++)
 		*(concat + i) = *(s1 + i);
 
-	for (j = 0; *(s2 + j) <= '\0'; j++, i++)
+	for (j = 0; *(s2 + j) != '\0'; j++, i++)
 		*(concat + i) = *(s2 + j);
 
 	return (concat);
