@@ -5,7 +5,7 @@
  *
  * Return: A copy of the string given as a parameter.
  */
-char *_strdup(char *str)
+char *_strdup (char *str)
 {
 	unsigned int i;
 	char *newS;
@@ -20,7 +20,6 @@ char *_strdup(char *str)
 
 	if (newS == NULL)
 	{
-		free (newS);
 		return (NULL);
 	}
 
