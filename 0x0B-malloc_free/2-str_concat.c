@@ -16,23 +16,21 @@ char *str_concat(char *s1, char *s2)
 
 	i = 0;
 
-	while (*(s1 + i) != '\0' || *(s2 + i) != '\0')
+	while (*(s1 + i) != '\0' && *(s2 + i) != '\0')
 		i++;
 
-	concat = (char *)malloc(sizeof(char) * i + 1);
+	concat = (char *)malloc(1 + sizeof(char) * i);
 
 	if (concat == NULL)
-	{
 		return (NULL);
-	}
 
 	for (i = 0; *(s1 + i) != '\0'; i++)
 		*(concat + i) = *(s1 + i);
 
-	for (j = 0; *(s2 + j) != '\0'; j++, i++)
-		*(concat + i) = *(s2 + j);
+	for (j = 0; *(s2 + j) != '\0'; j++)
+		*(concat + i + j) = *(s2 + j);
 
-	*(concat + i) = '\0';
+	*(concat + (i + j) + 1) = '\0';
 
 	return (concat);
 }
