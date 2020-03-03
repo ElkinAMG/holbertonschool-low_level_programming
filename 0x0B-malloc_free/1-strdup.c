@@ -5,9 +5,9 @@
  *
  * Return: A copy of the string given as a parameter.
  */
-char *_strdup (char *str)
+char *_strdup(char *str)
 {
-	unsigned int i;
+	int i;
 	char *newS;
 
 	if (str == NULL)
@@ -19,13 +19,11 @@ char *_strdup (char *str)
 	newS = malloc(sizeof(char *) * (i + 1));
 
 	if (newS == NULL)
-	{
 		return (NULL);
-	}
 
 	i = 0;
 
-	while (*(str + i) != '\0')
+	while (*newS < *(str + i))
 	{
 		*(newS + i) = *(str + i);
 		i++;
