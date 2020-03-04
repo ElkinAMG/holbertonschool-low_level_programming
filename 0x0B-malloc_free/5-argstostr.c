@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <string.h>
 /**
  * argstostr - Concatenates all the arguments of your programs.
  * @ac: Arguments Counter.
@@ -8,14 +9,17 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, k;
+	int i, k, total;
 	unsigned int j;
 	char *str;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	str = malloc(sizeof(char *) * ac);
+	for (i = 0; i < ac; i++)
+		total = strlen(*(av + i));
+
+	str = malloc(sizeof(char *) * total + 1);
 
 	if (str == NULL)
 		return (NULL);
