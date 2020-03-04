@@ -15,10 +15,10 @@ char *argstostr(int ac, char **av)
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	str = malloc(sizeof(char *) * ac);
+	str = malloc(1 + sizeof(char *) * ac);
 
 	if (str == NULL)
-		return (0);
+		return (NULL);
 
 
 	k = 0;
