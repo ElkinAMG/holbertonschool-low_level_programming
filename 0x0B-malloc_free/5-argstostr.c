@@ -18,7 +18,7 @@ char *argstostr(int ac, char **av)
 	str = malloc(sizeof(char *) * ac);
 
 	if (str == NULL)
-		return (NULL);
+		return (0);
 
 
 	k = 0;
