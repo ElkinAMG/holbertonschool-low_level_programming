@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * struct Dog - This structure makes reference to a dog.
+ * struct dog - This structure makes reference to a dog.
  * @name: Dog's Name.
  * @age: Dog's Age.
  * @owner: Dog's Owner.
