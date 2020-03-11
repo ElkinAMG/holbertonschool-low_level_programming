@@ -6,7 +6,7 @@
  *
  * Return: It does not return nothing.
  */
-void print_name(char *name, void (*f)(char *))
+void print_name(char *name, f f)
 {
 	if (f != NULL)
 		f(name);
