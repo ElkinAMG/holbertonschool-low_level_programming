@@ -2,12 +2,12 @@
 /**
  * print_name - It prints a name.
  * @name: It's name to print.
- * @f: Pointer to a function.
+ * @whatsmyname: Pointer to a function.
  *
  * Return: It does not return nothing.
  */
-void print_name(char *name, f f)
+void print_name(char *name, f whatsmyname)
 {
-	if (f != NULL)
-		f(name);
+	if (whatsmyname != NULL)
+		whatsmyname(name);
 }
