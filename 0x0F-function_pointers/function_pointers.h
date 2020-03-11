@@ -7,9 +7,10 @@ int _putchar(char c);
 
 /*TYPEDEFINITIONS*/
 typedef void (*f)(char *);
+typedef void (*action)(int);
 /*END*/
 
 void print_name(char *name, f);
-void array_iterator(int *array, size_t size, void (*action)(int));
+void array_iterator(int *array, size_t size, action);
 
 #endif /* _FUNCTION_POINTERS_ */

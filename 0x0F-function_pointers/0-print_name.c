@@ -4,7 +4,7 @@
  * @name: It's name to print.
  * @whatsmyname: Pointer to a function.
  *
- * Return: It does not return nothing.
+ * Return: It returns nothing.
  */
 void print_name(char *name, f whatsmyname)
 {
