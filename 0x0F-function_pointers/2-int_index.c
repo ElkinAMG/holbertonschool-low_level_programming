@@ -6,7 +6,8 @@
  * @size: It's the size of elements in the array.
  * @_cmp: Pointer to function cmp.
  *
- * Return: It returns the index of the element truth checked, otherwise returns -1.
+ * Return: It returns the index of the element truth checked,
+ * otherwise returns -1.
  */
 int int_index(int *array, int size, cmp _cmp)
 {
