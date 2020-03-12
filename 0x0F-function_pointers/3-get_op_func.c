@@ -1,7 +1,7 @@
 #include "3-calc.h"
 /**
  * get_op_func - Operation Selector.
- * @s - String to check.
+ * @s: String to check.
  *
  * Return: It returns a pointer toward operator given.
  */

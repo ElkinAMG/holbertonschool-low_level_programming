@@ -6,21 +6,21 @@
  *
  * Return: It returns the result of numbers.
  */
-int main(int argc, char *argv[])
+int main(int ac, char **av)
 {
-	if (argc != 4)
+	if (ac != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
-	if (get_op_func(argv[2]) == NULL)
+	if (get_op_func(av[2]) == NULL)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%i\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
+	printf("%i\n", get_op_func(av[2])(atoi(av[1]), atoi(av[3])));
 
 	return (0);
 }
