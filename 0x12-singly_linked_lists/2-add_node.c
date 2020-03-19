@@ -8,18 +8,26 @@
  * Return: The address of the new element, or NULL if it failed.
  */
 
-size_t length(str);
-
 list_t *add_node(head h, str s)
 {
+	/* Lenght function:  */
+	size_t length(str);
+
 	/* Declare the new node like NULL:  */
 	list_t *newNode = NULL;
 
+	/* Verify: */
+	if (!h || !s)
+		return (NULL);
+
 	/* Define the size of new node:  */
-	newNode = (list_t*)malloc(sizeof(list_t));
+	newNode = (list_t *)malloc(sizeof(list_t));
 	/* If it fails: */
 	if (!newNode)
+	{
+		free(newNode);
 		return (NULL);
+	}
 	/* Define value of new node -> str:  */
 	newNode->str = strdup(s);
 	/* Define lenght of characters: */
@@ -31,6 +39,13 @@ list_t *add_node(head h, str s)
 
 	return (newNode->next);
 }
+
+/**
+ * length - Calculates the lenght in a string.
+ * @s: String to counts.
+ *
+ * Return: Lenght.
+ */
 
 size_t length(str s)
 {
