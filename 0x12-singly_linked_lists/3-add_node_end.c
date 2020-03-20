@@ -29,43 +29,25 @@ list_t *add_node_end(head h, str s)
 {
 	/* Declare a new node: */
 	list_t *newNode;
-
-	/* Declare the last node replacement: */
-	list_t *lastNode = *h;
-
 	/* Verify: */
-	if (!s)
+	if (!s || !h)
 		return (NULL);
 
 	newNode = malloc(sizeof(list_t));
-
 	/* Verify: */
 	if (!newNode)
-	{
-		free(newNode);
 		return (NULL);
-	}
-
 	/* Declare string: */
 	newNode->str = strdup(s);
 	/* Declare length: */
 	newNode->len = length(s);
 	/* Declare next's address as NULL: */
 	newNode->next = NULL;
-
-	/* Verify if reference is NULL at 1st time: */
-	if (!(*h))
-	{
-		*h = newNode;
-		return (NULL);
-	}
-
-	/* Veify while be different to null: */
-	while (lastNode->next)
-		lastNode = lastNode->next; /* Traverse until the NULL */
-
-	/* Assing last node as new node: */
-	lastNode->next = newNode;
+	/* Traverse to last node: */
+	while (*h)
+		h = &(*h)->next;
+	/* Assing last node the value of new node:*/
+	*h = newNode;
 
 	/* Return address: */
 	return (newNode);
