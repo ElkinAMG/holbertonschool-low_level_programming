@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ * _msg - check the code for Holberton School students.
  *
- * Return: Always 0.
+ * Return: Nothing.
  */
 void __attribute__((constructor)) _msg(void)
 {
-    printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+	printf("You're beat! and yet, you must allow,\n"
+	       "I bore my house upon my back!\n");
 }
