@@ -30,6 +30,7 @@ typedef list_t **head;
 /* PROTOTYPES */
 size_t print_list(h);
 size_t list_len(h);
+size_t length(str);
 list_t *add_node(head, str);
 list_t *add_node_end(head, str);
 void free_list(list_t *head);
