@@ -22,9 +22,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	/*-----------------------------------*/
 
 	int swap = n ^ m;
-	int flips = 0;
+	int flips;
 
-	for (; swap > 0; flips += (swap & 1), swap >>= 1)
+	for (flips = 0; swap; flips += (swap & 1), swap >>= 1)
 		;
 
 	return (flips);
