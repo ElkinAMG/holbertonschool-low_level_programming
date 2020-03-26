@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -11,8 +10,13 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	int i = 0, exp = 0;
-	unsigned int sum = 0;
+	int i, exp;
+	unsigned int sum;
+
+	if (!b)
+		return (0);
+
+	i = exp = sum = 0;
 
 	for (; *(b + exp); exp++)
 		if (*(b + exp) != 48 && *(b + exp) != 49)
