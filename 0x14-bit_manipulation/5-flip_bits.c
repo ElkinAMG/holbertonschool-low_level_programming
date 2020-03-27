@@ -10,21 +10,11 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
+	unsigned long int swap = n ^ m;
+	unsigned int flips;
 
-	/*-----------------------------------*/
-	/* n    → 1024 = 0000 0010 0000 0000 */
-	/* m    → 1    = 0000 0000 0000 0001 */
-	/*               ------------------- */
-	/* swap →  ^   = 0000 0010 0000 0001 */
-	/* flips →  &  = 0000 0000 0000 0001 */
-	/*               ------------------- */
-	/*                   FLIPS →  2      */
-	/*-----------------------------------*/
-
-	unsigned int swap = n ^ m, flips;
-
-	for (flips = 0; swap; flips += (swap & 1), swap >>= 1)
-		;
+	for (flips = 0; swap; swap >>= 1)
+		flips += (swap & 1);
 
 	return (flips);
 }
