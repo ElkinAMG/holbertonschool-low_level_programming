@@ -21,10 +21,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	/*                   FLIPS →  2      */
 	/*-----------------------------------*/
 
-	int swap = n ^ m;
-	unsigned int flips = 0;
+	unsigned int swap = n ^ m, flips;
 
-	for (; swap; flips += (swap & 1), swap >>= 1)
+	for (flips = 0; swap; flips += (swap & 1), swap >>= 1)
 		;
 
 	return (flips);
