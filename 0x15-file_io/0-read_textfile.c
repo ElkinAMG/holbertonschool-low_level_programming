@@ -4,7 +4,7 @@
  * read_textfile - Read a text file and print it to STDOUT.
  * @filename: Name of the file.
  * @letters: Number of letters into `filename` text.
- * 
+ *
  * Return: It returns the number of letters it could read, otherwise 0.
  */
 
