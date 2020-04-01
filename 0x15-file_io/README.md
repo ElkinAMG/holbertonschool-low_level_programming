@@ -11,9 +11,9 @@ The `OUTPUT` is known as a system whose main purpose is to show the user differe
 ***
 ## Tasks:
 
-| **0. Tread lightly, she is near** | [```0-read_textfile.c```](#) |
+| **0. Tread lightly, she is near** | [```0-read_textfile.c```](/0-read_textfile.c) |
 |:---------------------------------: | :-------------------------------------------: |
-| **1. Under the snow** | [**```1-create_file.c```**](#) |
-| **2. Speak gently, she can hear** | [**```2-append_text_to_file.c```**](#) |
-| **3. cp** | [**```3-cp.c```**](#) |
+| **1. Under the snow** | [**```1-create_file.c```**](/1-create_file.c) |
+| **2. Speak gently, she can hear** | [**```2-append_text_to_file.c```**](/2-append_text_to_file.c) |
+| **3. cp** | [**```3-cp.c```**](/3-cp.c) |
 ***
