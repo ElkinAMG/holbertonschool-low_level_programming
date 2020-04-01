@@ -34,27 +34,29 @@ int main(int argc, char **argv)
 	opT = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (opT < 0)
 	{
-		sCloser(opF);
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 	}
 
-	rdF = read(opF, txt, BUFFER);
-	if (rdF < 0)
+	/* READ WITH BUFFER */
+	rdF = wrT = 1;
+	while (rdF)
 	{
-		sCloser(opF);
-		sCloser(opT);
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
-	}
-
-	wrT = write(opT, txt, rdF);
-	if (wrT < 0)
-	{
-		sCloser(opF);
-		sCloser(opT);
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		exit(99);
+		rdF = read(opF, txt, BUFFER);
+		if (rdF < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
+		}
+		else
+		{
+			wrT = write(opT, txt, rdF);
+			if (wrT < 0)
+			{
+				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
+				exit(99);
+			}
+		}
 	}
 
 	sCloser(opF);
