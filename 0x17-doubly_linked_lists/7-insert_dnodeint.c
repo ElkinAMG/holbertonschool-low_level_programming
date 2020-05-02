@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdio.h>
 /**
  * insert_dnodeint_at_index - Adds a node in a given index.
  * @h: Head's linked list.
@@ -19,7 +19,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		while (*h && idx > 0)
 			h = &(*h)->next, idx--;
 
-		if (idx > 0)
+		if (idx != 0)
 			return (NULL);
 
 		newNode = malloc(sizeof(dlistint_t));
@@ -27,13 +27,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			return (NULL);
 
 		prev = *h ? (*h)->prev : NULL;
-
 		newNode->n = n;
-		newNode->next = *h;
-		newNode->prev = prev;
 
 		if (*h)
 			(*h)->prev = newNode;
+
+		newNode->next = *h;
+		newNode->prev = prev;
 
 		if (prev)
 			prev->next = newNode;
