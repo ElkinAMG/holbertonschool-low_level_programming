@@ -9,11 +9,19 @@
 
 hash_table_t *hash_table_create(unsigned long int size)
 {
-	hash_table_t *new_hash;
+	hash_table_t *new_ht;
+	hash_node_t *node;
 
-	new_hash = malloc(sizeof(hash_table_t) * size);
-	if (!new_hash)
+	new_ht = malloc(sizeof(hash_table_t));
+	if (!new_ht)
 		return (NULL);
 
-	return (new_hash);
+	node = calloc(sizeof(hash_node_t), size);
+	if (!node)
+		return (NULL);
+
+	new_ht->size = size;
+	new_ht->array = &node;
+
+	return (new_ht);
 }
