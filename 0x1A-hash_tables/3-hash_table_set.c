@@ -49,6 +49,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int k_conv;
 	hash_node_t *hash_node, *update;
 	char *upd_val;
+	int bool = 0;
 
 	if (ht && key && value && strlen(key) > 0 && ht->size > 0)
 	{
@@ -62,7 +63,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			{
 				upd_val = strdup(value);
 				if (!upd_val)
-					return (0);
+					return (bool);
 
 				free(update->value);
 				update->value = upd_val;
@@ -75,7 +76,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			return (0);
 		hash_node->next = ht->array[k_conv];
 		ht->array[k_conv] = hash_node;
+		bool = 1;
 	}
 
-	return (1);
+	return (bool);
 }
