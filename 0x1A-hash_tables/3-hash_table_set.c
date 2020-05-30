@@ -60,7 +60,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			if (strcmp(update->key, key) == 0)
 			{
-				upd_val = strdup(key);
+				upd_val = strdup(value);
 				if (!upd_val)
 					return (0);
 
