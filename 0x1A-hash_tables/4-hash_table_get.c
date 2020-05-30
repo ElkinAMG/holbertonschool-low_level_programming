@@ -2,8 +2,8 @@
 
 /**
  * hash_table_get - It retrieves a value associated with a key.
- * @ht - It's a hash table to look up.
- * @key - It's the key to search.
+ * @ht: It's a hash table to look up.
+ * @key: It's the key to search.
  *
  * Return: The value associated with the element, or NULL otherwise.
  */
