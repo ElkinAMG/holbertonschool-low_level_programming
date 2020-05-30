@@ -4,6 +4,8 @@
 #include "h_structures.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 
 /* PROTOTYPES */
 hash_table_t *hash_table_create(unsigned long int size);
