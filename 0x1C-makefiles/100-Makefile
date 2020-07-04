@@ -1,13 +1,10 @@
 CC = gcc
-HEADER = m.h
 CFLAGS = -Wall -Werror -Wextra -pedantic
 SRC = holberton.c main.c
-OBJ = $(patsubst %.c, %.c, $(SRC))
+OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = holberton
 
-.PHONY: all clean oclean fclean re
-
-all: $(HEADER) $(OBJ)
+all: $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
