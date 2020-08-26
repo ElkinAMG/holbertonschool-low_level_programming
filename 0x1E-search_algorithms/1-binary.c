@@ -1,5 +1,13 @@
 #include "search_algos.h"
 
+/**
+ * print_array - Description of a function.
+ * @array: A description of a parameter.
+ * @from: A description of a parameter.
+ * @to: A description of a parameter.
+ *
+ * Return: Nothing.
+ */
 
 void print_array(int *array, int from, int to)
 {
@@ -34,12 +42,12 @@ int binary_search(int *array, size_t size, int value)
 
 			if (array[index] < value)
 			{
-			        left = index + 1;
+				left = index + 1;
 				print_array(array, left, size);
 		        }
 			else if (array[index] > value)
 			{
-		        	right = index - 1;
+				right = index - 1;
 				print_array(array, 0, right+1);
 			}
 			else
