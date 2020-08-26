@@ -44,7 +44,7 @@ int binary_search(int *array, size_t size, int value)
 			{
 				left = index + 1;
 				print_array(array, left, size);
-		        }
+			}
 			else if (array[index] > value)
 			{
 				right = index - 1;
