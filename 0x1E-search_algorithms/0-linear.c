@@ -4,7 +4,7 @@
  * s_index - Description of a function.
  * @array: A description of a parameter.
  * @value: A description of a parameter.
- * @position: A description of a parameter.
+ * @pos: A description of a parameter.
  * @size: A description of a parameter.
  *
  * Return: It returns an index.
